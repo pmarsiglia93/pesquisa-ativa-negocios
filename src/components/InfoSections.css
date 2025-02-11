@@ -1,0 +1,29 @@
+.info-sections {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .info-block {
+    margin-bottom: 30px;
+  }
+  
+  .info-block h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .info-block p, .info-block ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .info-block ul {
+    padding-left: 20px;
+  }
+  
+  .info-block ul li {
+    margin-bottom: 10px;
+  }
+  

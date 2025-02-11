@@ -1,0 +1,31 @@
+.data-security-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+  }
+  
+  .data-security-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .data-security-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .security-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .security-list li {
+    font-size: 1rem;
+    margin: 10px 0;
+    background: #e3f2fd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
