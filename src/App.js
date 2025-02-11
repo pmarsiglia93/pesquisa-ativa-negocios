@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import InfoSections from './components/InfoSections';
-import SolutionsSection from './components/SolutionsSection';
-import DataSecuritySection from './components/DataSecuritySection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import HeroSection from './components/HeroSection/HeroSection';
+import InfoSections from './components/InfoSection/InfoSections';
+import SolutionsSection from './components/SolutionsSection/SolutionsSection';
+import DataSecuritySection from './components/DataSecuritySection/DataSecuritySection';
+import ContactSection from './components/ContactSection/ContactSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
