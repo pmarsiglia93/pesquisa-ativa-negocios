@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from "lucide-react"; // Ícones para o menu burguer
+import { Menu, X } from "lucide-react"; // Ícones do menu burguer
 import { motion } from "framer-motion"; // Biblioteca para animação
 import './Header.css';
 
@@ -17,12 +16,12 @@ function Header() {
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        {/* Menu Desktop (permanece visível) */}
+        {/* Menu Desktop */}
         <nav className="nav-menu">
-          <Link to="/sobre">Sobre</Link>
-          <Link to="/beneficios">Benefícios</Link>
-          <Link to="/solucoes">Soluções</Link>
-          <Link to="/contato">Contato</Link>
+          <a href="#sobre">Sobre</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#solucoes">Soluções</a>
+          <a href="#contato">Contato</a>
         </nav>
 
         {/* Menu Mobile (Full Screen Overlay) */}
@@ -37,10 +36,10 @@ function Header() {
               <X size={32} />
             </button>
             <nav className="mobile-nav">
-              <Link to="/sobre" onClick={() => setMenuOpen(false)}>Sobre</Link>
-              <Link to="/beneficios" onClick={() => setMenuOpen(false)}>Benefícios</Link>
-              <Link to="/solucoes" onClick={() => setMenuOpen(false)}>Soluções</Link>
-              <Link to="/contato" onClick={() => setMenuOpen(false)}>Contato</Link>
+              <a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre</a>
+              <a href="#beneficios" onClick={() => setMenuOpen(false)}>Benefícios</a>
+              <a href="#solucoes" onClick={() => setMenuOpen(false)}>Soluções</a>
+              <a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a>
             </nav>
           </motion.div>
         )}

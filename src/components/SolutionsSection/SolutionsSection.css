@@ -1,4 +1,4 @@
-.container{
+.container {
   box-sizing: border-box;
   max-width: 1200px;
   padding-left: 20px;
@@ -7,68 +7,121 @@
   margin-right: auto;
 }
 
-.solutions-section {
-    padding: 40px 20px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .solutions-section h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
-  .solutions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .solution-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
-  
-  .solution-card h3 {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #000;
-    margin-bottom: 10px;
-  }
-  
-  .solution-card p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #000;
-  }
-  
-  .solution-button {
-    display: inline-block;
-    padding: 16px 32px;
-    background: linear-gradient(#ffbf00, #f2a50c);
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    color: var(--cor-p5);
-    font: 600 1.125rem / 1.35 "Poppins", sans-serif;
-    max-width: max-content;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .solution-button:hover {
-    background: linear-gradient(#f2a50c, #ffbf00);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-  }
+.solutions-bg{
+  background: #000;
+}
 
-  .div-solution-button{
-    display: flex;
-    justify-content: center;
-  }
-  
+.solutions-section {
+  padding: 40px 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.solutions-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Ajuste no Swiper */
+.solutions-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 40px; /* Espaço para paginação */
+  overflow: hidden; /* Evita cortes e desalinhamentos */
+}
+
+/* Ajustando os cards */
+.solution-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.solution-card h3 {
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.solution-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Melhorando a estilização do botão */
+.solution-button {
+  display: inline-block;
+  padding: 16px 32px;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: black;
+  font: 600 1.125rem / 1.35 "Poppins", sans-serif;
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.solution-button:hover {
+  background: linear-gradient(#f2a50c, #ffbf00);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.div-solution-button {
+  display: flex;
+  justify-content: center;
+}
+
+/* Ajustando os controles de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Ajustando a paginação */
+.swiper-pagination-bullet {
+  background: white !important;
+}
+
+.solutions-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.solution-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: calc(100% - 20px); /* Ajuste fino para evitar cortes */
+  max-width: 360px; /* Garante que cada slide não ultrapasse o limite */
+}
+
+.solution-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+}

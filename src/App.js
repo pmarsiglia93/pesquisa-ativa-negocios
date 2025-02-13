@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 import Header from './components/Header/Header';
 import HeroSection from './components/HeroSection/HeroSection';
 import InfoSections from './components/InfoSection/InfoSections';
@@ -13,11 +13,18 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <HeroSection />
-        <InfoSections />
-        <SolutionsSection />
-        <DataSecuritySection />
-        <ContactSection />
+        <section id="sobre">
+          <HeroSection />
+        </section>
+        <section id="beneficios">
+          <InfoSections />
+        </section>
+        <section id="solucoes">
+          <SolutionsSection />
+        </section>
+        <section id="contato">
+          <ContactSection />
+        </section>
         <Footer />
       </div>
     </Router>

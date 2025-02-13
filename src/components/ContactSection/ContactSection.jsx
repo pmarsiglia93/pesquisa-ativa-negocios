@@ -22,7 +22,9 @@ function ContactSection() {
   };
 
   return (
-    <section className="contact-section">
+    <section className="contact-bg">
+
+    <div className="contact-section container">
       <h2>Agende uma Consultoria Gratuita</h2>
 
       <form onSubmit={handleSubmit} className="contact-form">
@@ -77,6 +79,7 @@ function ContactSection() {
           Enviar Mensagem
         </button>
       </form>
+    </div>
     </section>
   );
 }

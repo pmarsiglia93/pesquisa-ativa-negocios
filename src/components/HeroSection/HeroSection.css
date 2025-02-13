@@ -69,3 +69,36 @@
   height: auto;
   border-radius: 10px;
 }
+
+/* ✅ Responsividade para Mobile (abaixo de 768px) */
+@media (max-width: 767px) {
+  .hero-section {
+    flex-direction: column; /* Empilha os elementos */
+    text-align: center; /* Centraliza o texto */
+    gap: 20px;
+  }
+
+  .hero-text {
+    padding-bottom: 0; /* Remove espaçamento desnecessário */
+  }
+
+  .hero-title {
+    font-size: 2rem; /* Reduz tamanho do título */
+    margin-bottom: 15px;
+  }
+
+  .hero-description {
+    font-size: 1.2rem; /* Ajusta fonte do parágrafo */
+    margin-bottom: 20px;
+  }
+
+  .hero-button {
+    font-size: 1rem;
+    padding: 14px 28px; /* Ajusta tamanho do botão */
+  }
+
+  .hero-image img {
+    max-width: 90%; /* Ajusta a largura da imagem */
+    margin-top: 20px;
+  }
+}

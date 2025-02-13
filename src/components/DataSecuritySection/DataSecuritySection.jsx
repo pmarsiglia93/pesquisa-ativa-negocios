@@ -3,7 +3,7 @@ import './DataSecuritySection.css';
 
 function DataSecuritySection() {
   return (
-    <section className="data-security-section">
+    <section className="data-security-section container">
       <h2>Segurança de Dados e Conformidade com a LGPD</h2>
       <p>
         Nossa plataforma está totalmente em conformidade com a Lei Geral de Proteção de Dados (LGPD), garantindo a segurança e privacidade das informações de nossos clientes. 

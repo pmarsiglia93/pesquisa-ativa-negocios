@@ -11,7 +11,6 @@
   padding: 40px 20px;
   background-color: #fff;
   color: #333;
-  transition: clip-path 0.2s ease-in-out;
 }
 
 .info-block {
@@ -35,6 +34,30 @@
   position: relative;
   overflow: hidden;
   transition: clip-path 0.8s ease-in-out;
+}
+
+.diagonal-block {
+  position: relative;
+  padding: 40px;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: clip-path 0.6s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.diagonal-block h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.diagonal-block p,
+.diagonal-block ul {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #fff;
 }
 
 .info-block h2 {
@@ -69,15 +92,42 @@
 }
 
 .info-block ul li:hover {
-  color: #ffbb00;
+  color: #fff;
   font-weight: bold;
 }
 
 .info-block p:hover {
-  color: #ffbb00;
+  color: #fff;
   font-weight: bold;
 }
 
-.cor-p1 {
-  color: #ffbb00;
+/* ✅ Responsividade para Mobile (abaixo de 768px) */
+@media (max-width: 767px) {
+  .diagonal-block h2 {
+    font-size: 1.5rem; /* Reduz o tamanho do título */
+  }
+
+  .diagonal-block p,
+  .diagonal-block ul {
+    font-size: 1rem; /* Reduz fonte do texto */
+  }
+
+  .info-block h2 {
+    font-size: 1.8rem; /* Ajusta tamanho dos títulos padrão */
+  }
+
+  .info-block p,
+  .info-block ul {
+    font-size: 1rem; /* Ajusta tamanho dos parágrafos e listas */
+  }
+
+  .info-block ul {
+    padding-left: 10px; /* Reduz o padding */
+  }
+
+  .info-block ul li {
+    justify-content: center;
+    text-align: center;
+  }
 }
+
