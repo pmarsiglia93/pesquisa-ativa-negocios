@@ -7,7 +7,7 @@
   margin-right: auto;
 }
 
-.solutions-bg{
+.solutions-bg {
   background: #000;
 }
 
@@ -23,36 +23,46 @@
   margin-bottom: 40px;
 }
 
-/* Ajuste no Swiper */
-.solutions-slider {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding-bottom: 40px; /* Espaço para paginação */
-  overflow: hidden; /* Evita cortes e desalinhamentos */
+/* DESKTOP & TABLET: Mantemos o Swiper */
+.solutions-desktop {
+  display: block;
 }
 
-/* Ajustando os cards */
 .solution-card {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 100%;
+  width: calc(100% - 20px); /* Ajuste fino para evitar cortes */
+  max-width: 360px; /* Garante que cada slide não ultrapasse o limite */
 }
 
-.solution-card h3 {
-  font-size: 1.5rem;
-  color: #000;
-  margin-bottom: 10px;
+.solution-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.solution-card p {
-  font-size: 1rem;
-  margin-bottom: 20px;
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+}
+
+.swiper-slide h3{
   color: #000;
 }
+
+
+.swiper-slide p{
+  color: #000;
+}
+
 
 /* Melhorando a estilização do botão */
 .solution-button {
@@ -98,57 +108,67 @@
   max-width: 1200px;
   margin: auto;
   padding-bottom: 40px;
+  overflow: hidden;
 }
 
-.solution-card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: calc(100% - 20px); /* Ajuste fino para evitar cortes */
-  max-width: 360px; /* Garante que cada slide não ultrapasse o limite */
+/* MOBILE: Scroll Horizontal */
+.solutions-mobile {
+  display: none;
 }
 
-.solution-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: white !important;
-}
-
-.swiper-pagination-bullet {
-  background: white !important;
-}
-
-@media (max-width: 768px) {
-  .solutions-section {
-    padding: 30px 15px;
+@media (max-width: 767px) {
+  .solutions-desktop {
+    display: none; /* Esconde o Swiper */
   }
 
-  .solutions-section h2 {
-    font-size: 1.75rem;
+  .solutions-mobile {
+    display: block;
   }
 
-  /* ✅ Ajustando o tamanho do slide */
+  .solutions-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 10px 0;
+    scrollbar-width: none; /* Remove a barra de rolagem no Firefox */
+    -ms-overflow-style: none; /* Remove a barra de rolagem no IE e Edge */
+  }
+
+  .solutions-scroll::-webkit-scrollbar {
+    display: none; /* Remove a barra de rolagem no Chrome e Safari */
+  }
+
   .solution-card {
+    flex: 0 0 80%; /* Define o tamanho dos cards */
+    scroll-snap-align: start;
+    background-color: white;
     padding: 20px;
-    width: 85%;  /* Ajustando melhor a proporção */
-    max-width: 320px; /* Diminuindo um pouco o tamanho */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
 
-  .solution-button {
-    font-size: 1rem;
-    padding: 12px 24px;
+  .solution-card h3{
+    color: #000;
   }
 
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
+  .solution-card p{
+    color: #000;
+  }
+
+
+  .div-solution-button button{
+    display: inline-block;
+    padding: 16px 32px;
+    background: linear-gradient(#ffbf00, #f2a50c);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    color: var(--cor-p5);
+    font: 600 1.125rem / 1.35 "Poppins", sans-serif;
+    max-width: max-content;
+    border: none;
+    cursor: pointer;
   }
 }

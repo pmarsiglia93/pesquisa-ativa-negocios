@@ -31,31 +31,47 @@ function SolutionsSection() {
       <div className="solutions-section container">
         <h2>Nossas Soluções de Pesquisa</h2>
 
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={20} 
-          slidesPerView={1} 
-          pagination={{ clickable: true }}
-          loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 15, navigation: false, autoplay: false },
-            768: { slidesPerView: 2, spaceBetween: 20, navigation: false, autoplay: false },
-            1024: { slidesPerView: 2, spaceBetween: 30, navigation: true, autoplay: { delay: 3000 } },
-            1280: { slidesPerView: 3, spaceBetween: 40, navigation: true, autoplay: { delay: 3000 } },
-          }}
-          className="solutions-slider"
-        >
-          {solutions.map((solution, index) => (
-            <SwiperSlide key={index} className="solution-card">
-              <h3>{solution.title}</h3>
-              <p>{solution.description}</p>
-              <div className="div-solution-button">
-                <button className="solution-button">Falar com Consultor</button>
+        {/* Modo Desktop & Tablet: Swiper */}
+        <div className="solutions-desktop">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={2}
+            pagination={{ clickable: true }}
+            loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            breakpoints={{
+              768: { slidesPerView: 2, spaceBetween: 20, navigation: false, autoplay: false },
+              1024: { slidesPerView: 3, spaceBetween: 30, navigation: true, autoplay: { delay: 3000 } },
+            }}
+            className="solutions-slider"
+          >
+            {solutions.map((solution, index) => (
+              <SwiperSlide key={index} className="solution-card">
+                <h3>{solution.title}</h3>
+                <p>{solution.description}</p>
+                <div className="div-solution-button">
+                  <button className="solution-button">Falar com Consultor</button>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Modo Mobile: Scroll Horizontal */}
+        <div className="solutions-mobile">
+          <div className="solutions-scroll">
+            {solutions.map((solution, index) => (
+              <div key={index} className="solution-card">
+                <h3>{solution.title}</h3>
+                <p>{solution.description}</p>
+                <div className="div-solution-button">
+                  <button className="solution-button">Falar com Consultor</button>
+                </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
