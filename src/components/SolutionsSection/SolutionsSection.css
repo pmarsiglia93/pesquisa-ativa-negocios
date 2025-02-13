@@ -125,3 +125,30 @@
 .swiper-pagination-bullet {
   background: white !important;
 }
+
+@media (max-width: 768px) {
+  .solutions-section {
+    padding: 30px 15px;
+  }
+
+  .solutions-section h2 {
+    font-size: 1.75rem;
+  }
+
+  /* ✅ Ajustando o tamanho do slide */
+  .solution-card {
+    padding: 20px;
+    width: 85%;  /* Ajustando melhor a proporção */
+    max-width: 320px; /* Diminuindo um pouco o tamanho */
+  }
+
+  .solution-button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}
