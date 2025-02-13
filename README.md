@@ -7,10 +7,6 @@ O **Pesquisa Ativa Negócios** é uma plataforma focada em serviços de pesquisa
 
 ## 🚀 Como Rodar Localmente
 
-### Pré-requisitos
-- [Node.js](https://nodejs.org/)
-- [Git](https://git-scm.com/)
-
 ### Passos
 1. Clone o repositório:
 2. Acesse a pasta do projeto
