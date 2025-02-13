@@ -23,9 +23,9 @@ O **Pesquisa Ativa Negócios** é uma plataforma focada em serviços de pesquisa
 
 ## 📌 Tecnologias
 - React.js
-- Vercel
-- Styled Components (opcional)
-- React Router (opcional)
+- Html
+- CSS
+- Javascript
 
 ## 📬 Contato
 Dúvidas ou sugestões? Entre em contato:
