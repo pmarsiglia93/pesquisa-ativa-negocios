@@ -22,14 +22,16 @@ function SolutionsSection() {
   ];
 
   return (
-    <section className="solutions-section">
+    <section className="solutions-section container">
       <h2>Nossas Soluções de Pesquisa</h2>
       <div className="solutions-grid">
         {solutions.map((solution, index) => (
           <div key={index} className="solution-card">
             <h3>{solution.title}</h3>
             <p>{solution.description}</p>
+            <div className='div-solution-button'>
             <button className="solution-button">Falar com Consultor</button>
+            </div>
           </div>
         ))}
       </div>

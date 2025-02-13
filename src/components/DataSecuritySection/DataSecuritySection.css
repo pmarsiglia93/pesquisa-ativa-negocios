@@ -1,31 +1,56 @@
+.container{
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .data-security-section {
-    padding: 40px 20px;
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
-  }
-  
-  .data-security-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .data-security-section p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  
-  .security-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .security-list li {
-    font-size: 1rem;
-    margin: 10px 0;
-    background: #e3f2fd;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: center;
+}
+
+.data-security-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.data-security-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Grid para os itens de segurança */
+.security-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas */
+  grid-template-rows: auto auto; /* 2 linhas */
+  gap: 10px; /* Espaçamento entre os itens */
+  max-width: 800px; /* Largura máxima para ficar parecido com a imagem */
+  margin: 0 auto; /* Centraliza o grid */
+  cursor: pointer;  
+}
+
+/* Estilos para os itens dentro do grid */
+.security-item {
+  font-size: 1rem;
+  padding: 15px;
+  border: 1px solid #ddd; /* Borda sutil para separação */
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Adicionando efeito de hover */
+.security-item:hover {
+  background-color: #ffbb00;
+  color: #000;
+  transform: scale(1.05);
+}

@@ -9,12 +9,14 @@ function DataSecuritySection() {
         Nossa plataforma está totalmente em conformidade com a Lei Geral de Proteção de Dados (LGPD), garantindo a segurança e privacidade das informações de nossos clientes. 
         Utilizamos certificações reconhecidas internacionalmente para proteger seus dados contra acessos não autorizados.
       </p>
-      <ul className="security-list">
-        <li>Conformidade com a LGPD.</li>
-        <li>Certificação SSL para segurança de comunicação.</li>
-        <li>Criptografia de ponta a ponta dos dados.</li>
-        <li>Auditorias periódicas de segurança.</li>
-      </ul>
+      
+      {/* Grid de segurança */}
+      <div className="security-grid">
+        <div className="security-item">Conformidade com a LGPD.</div>
+        <div className="security-item">Certificação SSL para segurança de comunicação.</div>
+        <div className="security-item">Criptografia de ponta a ponta dos dados.</div>
+        <div className="security-item">Auditorias periódicas de segurança.</div>
+      </div>
     </section>
   );
 }

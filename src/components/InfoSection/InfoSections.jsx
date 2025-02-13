@@ -1,11 +1,20 @@
-import React from 'react';
-import './InfoSections.css';
+import React from "react";
+import { useScrollEffect } from "../../hooks/useScrollEffect";
+import { getDynamicClipPath } from "./InfoSectionsLogic";
+import "./InfoSections.css";
 
 function InfoSections() {
+  const scrollY = useScrollEffect();
+
   return (
-    <section className="info-sections">
+    <section
+      className="info-sections diagonal-section container"
+      style={{ clipPath: getDynamicClipPath(scrollY) }}
+    >
       <div className="info-block">
-        <h2>O Pesquisa Ativa é para você que...</h2>
+        <h2>
+          O Pesquisa Ativa é para você que <span className="cor-p1">...</span>
+        </h2>
         <ul>
           <li>Está inseguro na tomada de decisões estratégicas.</li>
           <li>Precisa identificar oportunidades de mercado.</li>
